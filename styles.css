@@ -1,1 +1,233 @@
-/* your code here */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #01e37f;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.product {
+    display: flex;
+    width: 750px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 40px 0;
+}
+
+/* Product Photo Section */
+.product__photo {
+    position: relative;
+    width: 45%;
+}
+
+.photo-container {
+    position: relative;
+    left: -35px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.photo-main {
+    position: relative;
+    height: 320px;
+    background: radial-gradient(#e5f89e, #96e001);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-main img {
+    position: relative;
+    left: -25px;
+    max-width: 105%;
+    filter: drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
+}
+
+.controls {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.controls i {
+    cursor: pointer;
+}
+
+.photo-album {
+    padding: 15px 10px;
+    background-color: #ffffff;
+}
+
+.photo-album ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.photo-album ul li {
+    width: 55px;
+    height: 55px;
+    padding: 6px;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-album ul li img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Product Details Section */
+.product__info {
+    width: 55%;
+    padding: 10px 35px 10px 10px;
+}
+
+.title h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #4c4c4c;
+    margin-bottom: 5px;
+}
+
+.title span {
+    font-size: 11px;
+    color: #a6a6a6;
+    letter-spacing: 1px;
+}
+
+.price {
+    margin: 25px 0;
+    color: #ff3f40;
+    font-size: 18px;
+}
+
+.price span {
+    font-size: 42px;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+/* Apple Varieties */
+.variant {
+    margin-bottom: 25px;
+}
+
+.variant h3,
+.description h3 {
+    color: #a6a6a6;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px;
+}
+
+.variant ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.variant ul li {
+    width: 38px;
+    height: 38px;
+    padding: 4px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.variant ul li:first-child,
+.variant ul li:hover {
+    border: 1px solid #a6a6a6;
+}
+
+.variant ul li img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Benefits */
+.description {
+    margin-bottom: 25px;
+}
+
+.description ul {
+    padding-left: 18px;
+    color: #4c4c4c;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Add to Cart Button */
+.buy--btn {
+    padding: 16px 36px;
+    background-color: #ff3f40;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 25px -7px #4c4c4c;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.buy--btn:hover {
+    background-color: #e32f30;
+}
+
+.buy--btn:active {
+    transform: scale(0.97);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .product {
+        width: 92%;
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .product__photo,
+    .product__info {
+        width: 100%;
+        padding: 0;
+    }
+
+    .photo-container {
+        left: 0;
+        margin-bottom: 25px;
+    }
+
+    .photo-main img {
+        left: 0;
+    }
+}
